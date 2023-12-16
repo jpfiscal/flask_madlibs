@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Madlibs!{% endblock %}
+{% block header %}Madlibs!{% endblock %}
+{% block content %}
+    <p id="hiddenStory">{{selected_story}}</p>
+    <form action="/generate">
+        <p>place: <input name="place"></p>
+        <p>noun: <input name="noun"></p>
+        <p>verb: <input name="verb"></p>
+        <p>adjective: <input name="adjective"></p>
+        <p>plural noun: <input name="plural_noun"></p>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}

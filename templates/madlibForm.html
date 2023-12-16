@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Madlibs!{% endblock %}
+{% block header %}Choose a Story{% endblock %}
+{% block content %}
+    <form action="/buildStory" method="post">
+        <select name="storyTemplates" id="storyTemplates">
+            <option value="Once upon a time in a long-ago {place}, there lived a
+            large {adjective} {noun}. It loved to {verb} {plural_noun}.">Once upon a time in a long-ago {place}, there lived a
+                large {adjective} {noun}. It loved to {verb} {plural_noun}.</option>
+            <option value="{noun}s weren't common in {place} back then, especially the {adjective} ones. 
+            This one was even more parculiar because of the way it {verb} {plural_noun}.">{noun}s weren't common in {place} back then, especially the {adjective} ones. 
+                This one was even more parculiar because of the way it {verb} {plural_noun}.</option>
+            <option value="In a {place} far away from civilization, lived a {adjective} {noun} famous
+            across the land for {verb} {plural_noun} better than anyone else.">In a {place} far away from civilization, lived a {adjective} {noun} famous
+            across the land for {verb} {plural_noun} better than anyone else. </option>
+          </select>
+          <input type="submit" value="Submit">
+    </form>
+{% endblock %}
